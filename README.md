@@ -1,48 +1,45 @@
-# Project Name
+# BoomBikes - Bike Sharing Assignment
 > Outline a brief description of your project.
 
+## OBJECTIVE
+> The objective is to model the demand for shared bikes with the available independent variables. It will be used by the management to understand how exactly the demands vary with different features. They can accordingly manipulate the business strategy to meet the demand levels and meet the customer's expectations. Further, the model will be a good way for management to understand the demand dynamics of a new market.
 
-## Table of Contents
-* [General Info](#general-information)
-* [Technologies Used](#technologies-used)
-* [Conclusions](#conclusions)
-* [Acknowledgements](#acknowledgements)
+
+## The steps we will follow in the exercise is as follows:
+* Reading, understanding and visualising the data
+* Preparing the data for modelling(train-test split, rescaling etc)
+* Training the model
+* Residual Analysis
+* Predictions and Evaluation on the test set
 
 <!-- You can include any other section that is pertinent to your problem -->
 
 ## General Information
-- Provide general information about your project here.
-- What is the background of your project?
-- What is the business probem that your project is trying to solve?
-- What is the dataset that is being used?
+Essentially, the company wants to evaluate — 
+1. Which variables are significant in predicting the demand for shared bikes
+2. How well those variables describe the bike demands
 
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+
+## Points To Note
+- Dropped a few insignificant columns
+- For Feature scaling, I have used MinMax Scaling
+- For building our model, we will be using the LinearRegression function from SciKit Learn for its compatibility with RFE (which is a utility from sklearn) and then dropping insignificant variables in presence of other variables.
+- Model 6 is our final model and we have considered p-value and VIF to decide on feature elimination
+- Error terms are normally distributed
 
 ## Conclusions
-- Conclusion 1 from the analysis
-- Conclusion 2 from the analysis
-- Conclusion 3 from the analysis
-- Conclusion 4 from the analysis
+- Conclusion 1 - cnt vs temp has a strong positive correlation
+- Conclusion 2 - 2019 marked a higher demand for shared bikes
+- Conclusion 3 - weather conditions affect the bike rentals
+- Conclusion 4 - R-square, Adjusted R-squared and F-statistic) and there are no multi collinear (high VIF) variables
+- Conclusion 5 - For the training set, the P-value for all the features is almost 0.0 and R2 is 0.830 which is significantly high and Prob (F-statistic) is 0.00000283
+- Conclusion 6 - Overall we have a decent model, R2 on test set is 79% which is pretty close to training set R2. it indicates stability- What model has learnt on training set, it can generalise well on test set
 
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
-
-## Technologies Used
-- library - version 1.0
-- library - version 2.0
-- library - version 3.0
-
-<!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
-
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- References if any...
-- This project was based on [this tutorial](https://www.example.com).
-
-
 ## Contact
-Created by [@githubusername] - feel free to contact me!
+Created by [@devikadevs] - feel free to contact me!
 
 
 <!-- Optional -->
